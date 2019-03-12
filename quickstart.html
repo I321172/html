@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quick Start</title>
+    <!--<script type="application/javascript" src="/html/xhr.js"/>-->
+</head>
+<body>
+<h2>This page is used to collect some frequent qray calls, Please input the company and server Url</h2>
+<div>
+    <label>Environment</label>
+    <select>
+        <option value="auto" selected>qaautocand</option>
+        <option value="cand">qacand</option>
+        <option value="patchpreview">patchpreview</option>
+        <option value="local">localhost</option>
+    </select>
+    <input type="text" size="20" placeholder="Please input the companyId"/>
+    <input type="text" size="70"
+           placeholder="Please input the server url if not in options of selection, eg http://localhost:8080"/>
+</div>
+
+<hr/>
+
+<div>
+    <h3>Do DB Upgrade first and then do DB Migrate</h3>
+    <button class="upgrade">Upgrade</button>
+    <button class="migrate">Migrate</button>
+</div>
+
+<hr/>
+
+<div>
+    <h3>Do SQL actions</h3>
+    <select>
+        <option value="auto" selected>select</option>
+        <option value="cand">insert</option>
+        <option value="patchpreview">count</option>
+        <option value="local">execute</option>
+    </select>
+    <select>
+        <option>users_sysinfo</option>
+    </select>
+    <input type="text" size="50" placeholder="Please input the table if not in selection"/>
+    <input type="text" size="20"
+           placeholder="Please input the condition"/>
+    <input id="global" type="radio"/><label for="global">isGlobalSchema</label>
+    <br/>
+    <button class="sql">Go</button>
+    <label> (condition is optional, sample)</label>
+</div>
+
+</body>
+</html>
